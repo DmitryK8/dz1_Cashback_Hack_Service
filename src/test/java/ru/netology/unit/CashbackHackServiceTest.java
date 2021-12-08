@@ -42,7 +42,7 @@ public class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldMustAdd0To1000() {
+    public void shouldErrorMustAdd0To1000() {
         assertEquals(service.remain(1000), 0);
 
         System.out.println();
