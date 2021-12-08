@@ -46,6 +46,6 @@ class CashbackHackServiceTest {
         assertEquals(0, service.remain(1000));
 
         System.out.println();
-        System.out.println("      To be added: 1000");
+        System.out.println("      Error: To be added: 1000");
     }
 }
