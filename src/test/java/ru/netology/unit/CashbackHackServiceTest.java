@@ -1,8 +1,8 @@
 package ru.netology.unit;
 
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 
 
@@ -11,7 +11,7 @@ public class CashbackHackServiceTest {
 
     @Test
     public void shouldMustAdd0() {
-        assertEquals(service.remain(0), 1000);
+        assertEquals(1000, service.remain(0));
 
         System.out.println();
         System.out.println("      Nothing needs to be added");
@@ -19,7 +19,7 @@ public class CashbackHackServiceTest {
 
     @Test
     public void shouldMustAdd100() {
-        assertEquals(service.remain(100), 900);
+        assertEquals(900, service.remain(100));
 
         System.out.println();
         System.out.println("      To be added: 100");
@@ -27,7 +27,7 @@ public class CashbackHackServiceTest {
 
     @Test
     public void shouldMustAdd1To1000() {
-        assertEquals(service.remain(1), 999);
+        assertEquals(999, service.remain(1));
 
         System.out.println();
         System.out.println("      To be added: 1");
@@ -35,17 +35,17 @@ public class CashbackHackServiceTest {
 
     @Test
     public void shouldMustAdd999To1000() {
-        assertEquals(service.remain(999), 1);
+        assertEquals(1, service.remain(999));
 
         System.out.println();
         System.out.println("      To be added: 999");
     }
 
-    @Test
-    public void shouldErrorMustAdd0To1000() {
-        assertEquals(service.remain(1000), 0);
-
-        System.out.println();
-        System.out.println("     Error: To be added: 1000");
-    }
+//    @Test
+//    public void shouldMustAdd0To1000() {
+//        assertEquals(0, service.remain(1000));
+//
+//        System.out.println();
+//        System.out.println("      Error: To be added: 1000");
+//    }
 }
