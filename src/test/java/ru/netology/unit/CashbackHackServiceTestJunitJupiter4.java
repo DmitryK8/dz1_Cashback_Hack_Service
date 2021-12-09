@@ -3,13 +3,12 @@ package ru.netology.unit;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-
-
-public class CashbackHackServiceTest {
+public class CashbackHackServiceTestJunitJupiter4 {
     CashbackHackService service = new CashbackHackService();
 
-    @Test
+    @org.junit.Test
     public void shouldMustAdd0() {
         assertEquals(1000, service.remain(0));
 
@@ -17,7 +16,7 @@ public class CashbackHackServiceTest {
         System.out.println("      Nothing needs to be added");
     }
 
-    @Test
+    @org.junit.Test
     public void shouldMustAdd100() {
         assertEquals(900, service.remain(100));
 
@@ -25,7 +24,7 @@ public class CashbackHackServiceTest {
         System.out.println("      To be added: 100");
     }
 
-    @Test
+    @org.junit.Test
     public void shouldMustAdd1To1000() {
         assertEquals(999, service.remain(1));
 
@@ -33,7 +32,7 @@ public class CashbackHackServiceTest {
         System.out.println("      To be added: 1");
     }
 
-    @Test
+    @org.junit.Test
     public void shouldMustAdd999To1000() {
         assertEquals(1, service.remain(999));
 
@@ -41,7 +40,7 @@ public class CashbackHackServiceTest {
         System.out.println("      To be added: 999");
     }
 
-    @Test
+    @org.junit.Test
     public void shouldMustAdd0To1000() {
         assertEquals(0, service.remain(1000));
 
