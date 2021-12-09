@@ -25,7 +25,7 @@ class CashbackHackServiceTest {
     }
 
     @Test
-    public void shouldMustAdd1To10000() {
+    public void shouldMustAdd1To1000() {
         assertEquals(999, service.remain(1));
 
         System.out.println();
