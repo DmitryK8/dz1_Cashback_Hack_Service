@@ -1,9 +1,8 @@
 package ru.netology.unit;
 
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.ls.LSOutput;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 
 class CashbackHackServiceTest {
